@@ -1,15 +1,41 @@
+//Send Request 1
+//Para fazer o cadastro de produtos
+//e inserir um novo produto 
 POST http://localhost:4002/products
 content-type: application/json
 
 {
-  "name": "Caneta lilás",
-  "price": 3
-}
-/*
-  "name":"Caderno de 96 folhas",
+  "name": "Caderno 96 folhas",
   "price": 15.00
-*/
+}
 
 ###
-
+// Send request 2
+//Efetivar cadstro de produtro a lista 
+//E obter informações do produto
 GET http://localhost:4002/products
+
+
+###
+//Send Request 3
+//Buscar produto e suas 
+//informações  pelo id do produto
+GET http://localhost:4002/products/7316a2e8-b5aa-4b69-bb90-8b6aa30e06c5
+
+###
+//Send Request 4
+//Fazer alteração do produto pelo id
+//inserindo o id do produto na url
+//depois de products/
+PUT http://localhost:4002/products/
+content-type: application/json
+
+{
+  "name": "Caderno 96 folhas preto",
+  "price": 12.00
+}
+
+###
+// Send Request 5
+//Fazer remoção de produto pelo id
+DELETE http://localhost:4002/products/5f956e65-027e-4d27-aa6c-024244baa646
